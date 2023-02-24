@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Quicksand:wght@500;700&family=Roboto&display=swap"
       rel="stylesheet"
@@ -17,16 +19,20 @@
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
-          <div class="header-logo"><a href="#"></a></div>
-          <nav class="header-nav">
-            <ul>
-              <li class="header-nav-link active"><a href="#">Home</a></li>
-              <li class="header-nav-link"><a href="#">Blog</a></li>
-              <li class="header-nav-link"><a href="#">Features</a></li>
-              <li class="header-nav-link"><a href="#">Pricing</a></li>
-              <li class="header-nav-link"><a href="#">Documentation</a></li>
-            </ul>
-          </nav>
+          <div class="header__inner">
+            <a class="header-logo" href="#"
+              ><img src="./img/logo.svg" alt="logo"
+            /></a>
+            <nav class="header-nav">
+              <ul>
+                <li class="header-nav-link active"><a href="#">Home</a></li>
+                <li class="header-nav-link"><a href="#">Blog</a></li>
+                <li class="header-nav-link"><a href="#">Features</a></li>
+                <li class="header-nav-link"><a href="#">Pricing</a></li>
+                <li class="header-nav-link"><a href="#">Documentation</a></li>
+              </ul>
+            </nav>
+          </div>
           <div class="header-social-wrapper">
             <a class="header-social-link" href="#"
               ><img src="./img/icons/facebook.png" alt="f"
@@ -40,8 +46,8 @@
             <a class="header-social-link" href="#"
               ><img src="./img/icons/m.png" alt="m"
             /></a>
+            <a href="#" class="header-btn">Get started</a>
           </div>
-          <a href="#" class="header-btn">Get started</a>
         </div>
       </div>
     </header>
@@ -146,9 +152,9 @@
         </div>
         <div class="btn-wrapper">
           <a href="#" class="btn red">Read more</a>
-          <div></div>
-          <span>OR</span>
-          <div></div>
+
+          <span class="obout-app-span">OR</span>
+
           <a href="#" class="btn blue">Get started</a>
         </div>
       </div>
@@ -177,60 +183,177 @@
       <span class="promo-subtitle">OUR RESOURCES</span>
       <h2 class="obout-app-title">Start reading our blog</h2>
       <div class="container">
-        <div class="slider">
-          <div class="slider__wrapper">
-            <img
-              class="slider__nav-btn"
-              src="./img/icons/left-slider.png"
-              alt="left"
-            />
+        <div class="slider__container">
+          <div class="slider">
             <div class="slider__card">
-              <div class="slider__card-img">
-                <img class="search" src="./img/search.png" alt="s" />
-                <img
-                  class="slider__img-1"
-                  src="./img/slider-img-1.png"
-                  alt=""
-                />
-                <div class="img-wrapper">
+              <div class="slider-inner">
+                <div class="slider__card-img">
+                  <img class="search" src="./img/search.png" alt="s" />
                   <img
-                    class="slider__img-2"
-                    src="./img/slider-img-2.png"
+                    class="slider__img-1"
+                    src="./img/slider-img-1.png"
                     alt=""
                   />
-                  <img
-                    class="slider__img-3"
-                    src="./img/slider-img-3.png"
-                    alt=""
-                  />
+                  <div class="img-wrapper">
+                    <img
+                      class="slider__img-2"
+                      src="./img/slider-img-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="slider__img-3"
+                      src="./img/slider-img-3.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="slider__descr">
-                <h3 class="slider__descr-name">How to start planning</h3>
-                <div class="slider__descr-text">
-                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
-                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
-                  persecuti. Natum petentium principes mei ea. Tota everti
-                  periculis vis ei, quas tibique pro at, eos ut decore ...
-                </div>
-                <div class="slider__descr-button-wrapper">
-                  <a href="#" class="btn blue">Read now</a>
-                  <div class="slider__descr-subtitle">
-                    Add to your bookmarks
+                <div class="slider__descr">
+                  <h3 class="slider__descr-name">How to start planning</h3>
+                  <div class="slider__descr-text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                    diceret persecuti. Natum petentium principes mei ea. Tota
+                    everti periculis vis ei, quas tibique pro at, eos ut decore
+                    ...
+                  </div>
+                  <div class="slider__descr-button-wrapper">
+                    <a href="#" class="btn blue">Read now</a>
+                    <div class="slider__descr-subtitle">
+                      Add to your bookmarks
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <img
-              class="slider__nav-btn"
-              src="./img/icons/right-slider.png"
-              alt="left"
-            />
-          </div>
-          <div class="promo-carousel-nav">
-            <div class="circle active"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="slider__card">
+              <div class="slider-inner">
+                <div class="slider__card-img">
+                  <img class="search" src="./img/search.png" alt="s" />
+                  <img
+                    class="slider__img-1"
+                    src="./img/slider-img-1.png"
+                    alt=""
+                  />
+                  <div class="img-wrapper">
+                    <img
+                      class="slider__img-2"
+                      src="./img/slider-img-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="slider__img-3"
+                      src="./img/slider-img-3.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="slider__descr">
+                  <h3 class="slider__descr-name">How to start planning</h3>
+                  <div class="slider__descr-text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                    <br />
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                    <br />
+                    diceret persecuti. Natum petentium principes mei ea. Tota
+                    <br />
+                    everti periculis vis ei, quas tibique pro at, eos ut decore
+                    ...
+                  </div>
+                  <div class="slider__descr-button-wrapper">
+                    <a href="#" class="btn blue">Read now</a>
+                    <div class="slider__descr-subtitle">
+                      Add to your bookmarks
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card">
+              <div class="slider-inner">
+                <div class="slider__card-img">
+                  <img class="search" src="./img/search.png" alt="s" />
+                  <img
+                    class="slider__img-1"
+                    src="./img/slider-img-1.png"
+                    alt=""
+                  />
+                  <div class="img-wrapper">
+                    <img
+                      class="slider__img-2"
+                      src="./img/slider-img-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="slider__img-3"
+                      src="./img/slider-img-3.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="slider__descr">
+                  <h3 class="slider__descr-name">How to start planning</h3>
+                  <div class="slider__descr-text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                    <br />
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                    <br />
+                    diceret persecuti. Natum petentium principes mei ea. Tota
+                    <br />
+                    everti periculis vis ei, quas tibique pro at, eos ut decore
+                    ...
+                  </div>
+                  <div class="slider__descr-button-wrapper">
+                    <a href="#" class="btn blue">Read now</a>
+                    <div class="slider__descr-subtitle">
+                      Add to your bookmarks
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card">
+              <div class="slider-inner">
+                <div class="slider__card-img">
+                  <img class="search" src="./img/search.png" alt="s" />
+                  <img
+                    class="slider__img-1"
+                    src="./img/slider-img-1.png"
+                    alt=""
+                  />
+                  <div class="img-wrapper">
+                    <img
+                      class="slider__img-2"
+                      src="./img/slider-img-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="slider__img-3"
+                      src="./img/slider-img-3.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="slider__descr">
+                  <h3 class="slider__descr-name">How to start planning</h3>
+                  <div class="slider__descr-text">
+                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                    <br />
+                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                    <br />
+                    diceret persecuti. Natum petentium principes mei ea. Tota
+                    <br />
+                    everti periculis vis ei, quas tibique pro at, eos ut decore
+                    ...
+                  </div>
+                  <div class="slider__descr-button-wrapper">
+                    <a href="#" class="btn blue">Read now</a>
+                    <div class="slider__descr-subtitle">
+                      Add to your bookmarks
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -424,16 +547,22 @@
         <header class="header">
           <div class="container">
             <div class="header-wrapper">
-              <div class="header-logo"><a href="#"></a></div>
-              <nav class="header-nav">
-                <ul>
-                  <li class="header-nav-link active"><a href="#">Home</a></li>
-                  <li class="header-nav-link"><a href="#">Blog</a></li>
-                  <li class="header-nav-link"><a href="#">Features</a></li>
-                  <li class="header-nav-link"><a href="#">Pricing</a></li>
-                  <li class="header-nav-link"><a href="#">Documentation</a></li>
-                </ul>
-              </nav>
+              <div class="header__inner">
+                <a class="header-logo" href="#"
+                  ><img src="./img/logo.svg" alt="logo"
+                /></a>
+                <nav class="header-nav">
+                  <ul>
+                    <li class="header-nav-link active"><a href="#">Home</a></li>
+                    <li class="header-nav-link"><a href="#">Blog</a></li>
+                    <li class="header-nav-link"><a href="#">Features</a></li>
+                    <li class="header-nav-link"><a href="#">Pricing</a></li>
+                    <li class="header-nav-link">
+                      <a href="#">Documentation</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
               <div class="header-social-wrapper">
                 <a class="header-social-link" href="#"
                   ><img src="./img/icons/facebook.png" alt="f"
@@ -447,14 +576,24 @@
                 <a class="header-social-link" href="#"
                   ><img src="./img/icons/m.png" alt="m"
                 /></a>
+                <a href="#" class="header-btn">Get started</a>
               </div>
-              <a href="#" class="header-btn">Get started</a>
             </div>
           </div>
         </header>
       </div>
       <span>Copyright © 2018 by Random site </span>
     </footer>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

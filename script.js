@@ -20,3 +20,10 @@ accordionItems.forEach((item) => {
     }
   });
 });
+
+$(document).ready(function () {
+  $(".slider").slick({
+    dots: true,
+    arrows: true,
+  });
+});
