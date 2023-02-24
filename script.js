@@ -11,21 +11,12 @@ accordionItems.forEach((item) => {
       answers.forEach((el) => {
         el.style.display = "none";
         img.style.transform = "rotate(0deg)";
+        item.style.color = "";
       });
     } else {
       content.style.display = "flex";
       img.style.transform = "rotate(180deg)";
+      item.style.color = "black";
     }
   });
 });
-
-// if (content.style.maxHeight) {
-//   answers.forEach((el) => {
-//     el.style.maxHeight = null;
-//   });
-// } else {
-//   answers.forEach((el) => {
-//     el.style.maxHeight = null;
-//     content.style.maxHeight = content.scrollHeight + 40 + "px";
-//   });
-// }
