@@ -683,7 +683,7 @@ form {
 }
 .questions__accordion-close {
   cursor: pointer;
-  padding: 15px 0;
+  padding: 20px 20px;
   width: 100%;
   display: flex;
   column-gap: 24px;
@@ -694,22 +694,27 @@ form {
   font-size: 15px;
   line-height: 19px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: start;
   letter-spacing: 0.03em;
   color: #8e96b7;
 }
-
-.questions__accordion-open {
-  width: 100%;
-  padding: 0 0 53px 0;
-  border-bottom: 1px solid #d8e3fe;
+.questions__item-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
 }
+
 .answer__wrapper {
+  transition: 0.5s;
+  /* max-height: 0;
+  overflow: hidden; */
   margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 62px;
+  margin-bottom: 30px;
 }
 .answer {
   font-family: "Roboto";
