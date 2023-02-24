@@ -639,7 +639,7 @@ form {
 
 .reviews {
   background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
-  padding: 50px 0 109px 0;
+  padding: 50px 0 50px 0;
 }
 
 .reviews__wrapper {
@@ -649,6 +649,7 @@ form {
   column-gap: 132px;
   justify-content: center;
 }
+
 .reviews__descr-wrapper {
   display: flex;
   flex-direction: column;
@@ -683,20 +684,42 @@ form {
   color: #a4abc8;
 }
 .reviews__slider {
+  width: 423px;
   margin-top: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.reviews__slider .slick-dots {
+  bottom: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+}
+
+.reviews__slider .slick-dots .slick-active button::before {
+  background: #5283ff;
+}
+.reviews__slider .slick-dots button::before {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: #bcbdc0;
+  border-radius: 50%;
+}
+
+.reviews__slider .slick-list {
+  height: 280px;
 }
 .reviews__slider-wrapper {
   display: flex;
   column-gap: 64px;
 }
 .reviews__slider-card {
-  padding: 41px 71px 22px 71px;
+  padding: 30px 71px 22px 71px;
   max-width: 423px;
   height: 175.37px;
-
   background: #ffffff;
   border: 1px solid #d8e3fe;
   box-shadow: 0px 5px 50px #f3f5fa;
@@ -714,13 +737,11 @@ form {
   position: absolute;
   top: 144px;
   left: 180px;
-}
-.reviews__slider .promo-carousel-nav {
-  margin-top: 109px;
+  z-index: 100;
 }
 
 .questions-section {
-  padding: 176px 0;
+  padding: 106px 0;
 }
 
 .questions__accordion-wrapper {
