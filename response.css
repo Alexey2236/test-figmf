@@ -20,7 +20,7 @@
     align-items: start;
     justify-content: space-between;
     z-index: 1000;
-    background-color: rgb(222, 234, 230);
+    background-color: #d2e1ff;
     margin: 0;
     padding: 50px 20px 20px 20px;
     transition: 0.3s;
