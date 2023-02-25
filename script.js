@@ -2,6 +2,7 @@ let accordionItems = document.querySelectorAll(".questions__item-wrapper");
 let answers = document.querySelectorAll(".answer__wrapper");
 let burger = document.querySelector(".header__burger-btn");
 let header = document.querySelector(".header");
+let headerNavLink = document.querySelectorAll(".header-nav-link");
 
 accordionItems.forEach((item) => {
   item.nextElementSibling.style.display = "none";
@@ -24,6 +25,9 @@ accordionItems.forEach((item) => {
 });
 
 burger.addEventListener("click", () => header.classList.toggle("open"));
+headerNavLink.forEach((link) => {
+  link.addEventListener("click", () => header.classList.remove("open"));
+});
 
 $(document).ready(function () {
   $(".slider").slick({
@@ -36,14 +40,6 @@ $(document).ready(function () {
           centerMode: true,
         },
       },
-      //   {
-      //     breakpoint: 425,
-      //     settiing: {
-      //       centerPadding: "40px",
-      //       centerMode: true,
-      //       variableWidth: true,
-      //     },
-      //   },
     ],
   });
 });
