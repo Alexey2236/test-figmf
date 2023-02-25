@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="response.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
@@ -20,6 +22,10 @@
       <div class="container">
         <div class="header-wrapper">
           <div class="header__inner">
+            <button class="header__burger-btn">
+              <span></span><span></span><span></span>
+            </button>
+
             <a class="header-logo" href="#"
               ><img src="./img/logo.svg" alt="logo"
             /></a>
@@ -86,23 +92,28 @@
     </section>
     <section class="action">
       <div class="container">
-        <img class="action__bg" src="./img/bg-action1.png" alt="action" />
-        <div class="action-text__wrapper">
-          <div class="action__subtitle">DESKTOP AND MOBILE APP</div>
-          <h2 class="action__title"><b>Plan</b> and <b>manage</b></h2>
-          <div class="action__descr">
-            Brute laoreet efficiendi id his, ea illum nonumes luptatum <br />
-            pro. Usu atqui laudem an, insolens gubergren similique <br />
-            est cu. Et vel modus congue vituperata. Solum patrioque <br />
-            no sea. Mea ex malis mollis oporteat. Eum an expetenda <br />
-            consequat.
+        <div class="action__wrapper">
+          <div class="action-text__wrapper">
+            <div class="action__subtitle">DESKTOP AND MOBILE APP</div>
+            <h2 class="action__title"><b>Plan</b> and <b>manage</b></h2>
+            <p class="action__descr">
+              Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
+              Usu atqui laudem an, insolens gubergren similique est cu. Et vel
+              modus congue vituperata. Solum patrioque no sea. Mea ex malis
+              mollis oporteat. Eum an expetenda consequat.
+            </p>
+            <div class="button-wrapper">
+              <a href="#" class="btn action__btn-play"
+                >View video <img src="./img/icons/play_wat.png" alt="play"
+              /></a>
+              <a href="#" class="btn action__btn">See features </a>
+            </div>
           </div>
-          <div class="button-wrapper">
-            <a href="#" class="btn action__btn-play"
-              >View video <img src="./img/icons/play_wat.png" alt="play"
-            /></a>
-            <a href="#" class="btn action__btn">See features </a>
-          </div>
+          <img
+            class="action__bg"
+            src="./img/action-bgbgbgbgbg.png"
+            alt="action"
+          />
         </div>
       </div>
     </section>
@@ -161,20 +172,24 @@
     </section>
 
     <section class="statistics">
-      <div class="statistics__interest">
-        <div class="statistics__info left">
-          <img src="./img/icons/interest-icon.png" alt="i" />
-          <div class="interest__number">89%</div>
-          <h3 class="interest__descr">
-            Customers who have increased their productivity
-          </h3>
+      <div class="statistics__wrapper">
+        <div class="statistics__interest">
+          <div class="statistics__info left">
+            <img src="./img/icons/interest-icon.png" alt="i" />
+            <div class="interest__number">89%</div>
+            <h3 class="interest__descr">
+              Customers who have increased their productivity
+            </h3>
+          </div>
         </div>
-      </div>
-      <div class="statistics__quantity">
-        <div class="statistics__info right">
-          <img src="./img/icons/users.png" alt="i" />
-          <div class="quantity__number">3123</div>
-          <div class="quantity__descr">Users who have used our application</div>
+        <div class="statistics__quantity">
+          <div class="statistics__info right">
+            <img src="./img/icons/users.png" alt="i" />
+            <div class="quantity__number">3123</div>
+            <div class="quantity__descr">
+              Users who have used our application
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -209,15 +224,15 @@
                 </div>
                 <div class="slider__descr">
                   <h3 class="slider__descr-name">How to start planning</h3>
-                  <div class="slider__descr-text">
+                  <p class="slider__descr-text">
                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut
                     nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
                     diceret persecuti. Natum petentium principes mei ea. Tota
                     everti periculis vis ei, quas tibique pro at, eos ut decore
                     ...
-                  </div>
+                  </p>
                   <div class="slider__descr-button-wrapper">
-                    <a href="#" class="btn blue">Read now</a>
+                    <a href="#" class="btn blue slider-blue">Read now</a>
                     <div class="slider__descr-subtitle">
                       Add to your bookmarks
                     </div>
@@ -249,18 +264,15 @@
                 </div>
                 <div class="slider__descr">
                   <h3 class="slider__descr-name">How to start planning</h3>
-                  <div class="slider__descr-text">
+                  <p class="slider__descr-text">
                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-                    <br />
                     nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                    <br />
                     diceret persecuti. Natum petentium principes mei ea. Tota
-                    <br />
                     everti periculis vis ei, quas tibique pro at, eos ut decore
                     ...
-                  </div>
+                  </p>
                   <div class="slider__descr-button-wrapper">
-                    <a href="#" class="btn blue">Read now</a>
+                    <a href="#" class="btn blue slider-blue">Read now</a>
                     <div class="slider__descr-subtitle">
                       Add to your bookmarks
                     </div>
@@ -292,61 +304,15 @@
                 </div>
                 <div class="slider__descr">
                   <h3 class="slider__descr-name">How to start planning</h3>
-                  <div class="slider__descr-text">
+                  <p class="slider__descr-text">
                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-                    <br />
                     nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                    <br />
                     diceret persecuti. Natum petentium principes mei ea. Tota
-                    <br />
                     everti periculis vis ei, quas tibique pro at, eos ut decore
                     ...
-                  </div>
+                  </p>
                   <div class="slider__descr-button-wrapper">
-                    <a href="#" class="btn blue">Read now</a>
-                    <div class="slider__descr-subtitle">
-                      Add to your bookmarks
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider__card">
-              <div class="slider-inner">
-                <div class="slider__card-img">
-                  <img class="search" src="./img/search.png" alt="s" />
-                  <img
-                    class="slider__img-1"
-                    src="./img/slider-img-1.png"
-                    alt=""
-                  />
-                  <div class="img-wrapper">
-                    <img
-                      class="slider__img-2"
-                      src="./img/slider-img-2.png"
-                      alt=""
-                    />
-                    <img
-                      class="slider__img-3"
-                      src="./img/slider-img-3.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="slider__descr">
-                  <h3 class="slider__descr-name">How to start planning</h3>
-                  <div class="slider__descr-text">
-                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-                    <br />
-                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                    <br />
-                    diceret persecuti. Natum petentium principes mei ea. Tota
-                    <br />
-                    everti periculis vis ei, quas tibique pro at, eos ut decore
-                    ...
-                  </div>
-                  <div class="slider__descr-button-wrapper">
-                    <a href="#" class="btn blue">Read now</a>
+                    <a href="#" class="btn blue slider-blue">Read now</a>
                     <div class="slider__descr-subtitle">
                       Add to your bookmarks
                     </div>
@@ -365,10 +331,10 @@
           <div class="reviews__descr-wrapper">
             <div class="reviews__subtitle">TESTIMONIALS</div>
             <h3 class="reviews__title">Customers's quotes</h3>
-            <div class="reviews__descr">
+            <p class="reviews__descr">
               Brute laoreet efficiendi id his, ea illum nonumes <br />
               luptatum pro. Usu atqui laudem an.
-            </div>
+            </p>
           </div>
 
           <div class="reviews__slider">
@@ -414,112 +380,109 @@
 
     <section class="questions-section">
       <div class="container">
-        <span class="promo-subtitle">Customer help</span>
-        <h2 class="obout-app-title">Frequently asked questions</h2>
-        <div class="questions__accordion-wrapper">
-          <div class="questions__accordion-close">
-            <div class="questions__item-wrapper">
-              <img
-                class="img-acc"
-                src="./img/icons/accordion-bottom.png"
-                alt="accordion"
-              />
-              Reque insolens in vel?
+        <div class="qu-wrapper">
+          <span class="promo-subtitle">Customer help</span>
+          <h2 class="obout-app-title">Frequently asked questions</h2>
+          <div class="questions__accordion-wrapper">
+            <div class="questions__accordion-close">
+              <div class="questions__item-wrapper">
+                <img
+                  class="img-acc"
+                  src="./img/icons/accordion-bottom.png"
+                  alt="accordion"
+                />
+                Reque insolens in vel?
+              </div>
+              <div class="answer__wrapper">
+                <span class="answer"
+                  >Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </span>
+                <a href="#" class="question__documentation"
+                  >Go to documentation</a
+                >
+              </div>
             </div>
-            <div class="answer__wrapper">
-              <span class="answer"
-                >Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br />
-                nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                <br />
-                diceret persecuti.
-              </span>
-              <a href="#" class="question__documentation"
-                >Go to documentation</a
-              >
+            <div class="questions__accordion-close">
+              <div class="questions__item-wrapper">
+                <img
+                  class="img-acc"
+                  src="./img/icons/accordion-bottom.png"
+                  alt="accordion"
+                />
+                Vis rebum error graecis ea, id sit postea accusamus?
+              </div>
+              <div class="answer__wrapper">
+                <span class="answer"
+                  >Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </span>
+                <a href="#" class="question__documentation"
+                  >Go to documentation</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="questions__accordion-close">
-            <div class="questions__item-wrapper">
-              <img
-                class="img-acc"
-                src="./img/icons/accordion-bottom.png"
-                alt="accordion"
-              />
-              Vis rebum error graecis ea, id sit postea accusamus?
+            <div class="questions__accordion-close">
+              <div class="questions__item-wrapper">
+                <img
+                  class="img-acc"
+                  src="./img/icons/accordion-bottom.png"
+                  alt="accordion"
+                />
+                Lorem repudiandae ne nec?
+              </div>
+              <div class="answer__wrapper">
+                <span class="answer"
+                  >Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </span>
+                <a href="#" class="question__documentation"
+                  >Go to documentation</a
+                >
+              </div>
             </div>
-            <div class="answer__wrapper">
-              <span class="answer"
-                >Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br />
-                nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                <br />
-                diceret persecuti.
-              </span>
-              <a href="#" class="question__documentation"
-                >Go to documentation</a
-              >
+            <div class="questions__accordion-close">
+              <div class="questions__item-wrapper">
+                <img
+                  class="img-acc"
+                  src="./img/icons/accordion-bottom.png"
+                  alt="accordion"
+                />
+                Ad dicit numquam vel. Et eos iudico feugait percipitur?
+              </div>
+              <div class="answer__wrapper">
+                <span class="answer"
+                  >Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </span>
+                <a href="#" class="question__documentation"
+                  >Go to documentation</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="questions__accordion-close">
-            <div class="questions__item-wrapper">
-              <img
-                class="img-acc"
-                src="./img/icons/accordion-bottom.png"
-                alt="accordion"
-              />
-              Lorem repudiandae ne nec?
-            </div>
-            <div class="answer__wrapper">
-              <span class="answer"
-                >Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br />
-                nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                <br />
-                diceret persecuti.
-              </span>
-              <a href="#" class="question__documentation"
-                >Go to documentation</a
-              >
-            </div>
-          </div>
-          <div class="questions__accordion-close">
-            <div class="questions__item-wrapper">
-              <img
-                class="img-acc"
-                src="./img/icons/accordion-bottom.png"
-                alt="accordion"
-              />
-              Ad dicit numquam vel. Et eos iudico feugait percipitur?
-            </div>
-            <div class="answer__wrapper">
-              <span class="answer"
-                >Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br />
-                nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                <br />
-                diceret persecuti.
-              </span>
-              <a href="#" class="question__documentation"
-                >Go to documentation</a
-              >
-            </div>
-          </div>
-          <div class="questions__accordion-close">
-            <div class="questions__item-wrapper">
-              <img
-                class="img-acc"
-                src="./img/icons/accordion-bottom.png"
-                alt="accordion"
-              />
-              Sea no dico percipitur. Fierent constituam definitiones id eum?
-            </div>
-            <div class="answer__wrapper">
-              <span class="answer"
-                >Quidam vocibus eum ne, erat consectetuer voluptatibus ut <br />
-                nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                <br />
-                diceret persecuti.
-              </span>
-              <a href="#" class="question__documentation"
-                >Go to documentation</a
-              >
+            <div class="questions__accordion-close">
+              <div class="questions__item-wrapper">
+                <img
+                  class="img-acc"
+                  src="./img/icons/accordion-bottom.png"
+                  alt="accordion"
+                />
+                Sea no dico percipitur. Fierent constituam definitiones id eum?
+              </div>
+              <div class="answer__wrapper">
+                <span class="answer"
+                  >Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </span>
+                <a href="#" class="question__documentation"
+                  >Go to documentation</a
+                >
+              </div>
             </div>
           </div>
         </div>

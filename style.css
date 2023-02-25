@@ -78,7 +78,43 @@ form {
   align-items: center;
   column-gap: 73px;
 }
+.header__burger-btn {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  position: relative;
+}
 
+.header__burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #1b191c;
+  left: 5px;
+  transition: transform 0.5s;
+}
+
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}
 .header-logo {
   display: block;
   margin-top: 10px;
@@ -222,20 +258,24 @@ form {
 }
 
 .action {
-  padding: 208px 0 218px 0;
+  padding: 48px 0 48px 0;
   background: #f5f8ff;
 }
-
+.action__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
 .action__bg {
-  display: block;
-  position: absolute;
-  left: 480px;
-  top: -90px;
-  z-index: 1;
+  display: inline-block;
 }
 .action-text__wrapper {
-  position: relative;
-  padding: 0 140px;
+  width: 513px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .action__subtitle {
   font-family: "Roboto";
@@ -257,6 +297,7 @@ form {
   color: #3d4f9f;
 }
 .action__descr {
+  text-align: center;
   margin-top: 27px;
   font-family: "Roboto";
   font-style: normal;
@@ -429,23 +470,26 @@ form {
   display: flex;
   justify-content: center;
 }
+
+.statistics__wrapper {
+  display: flex;
+  justify-content: center;
+}
 .statistics__interest {
   display: flex;
   justify-content: end;
   padding: 70px 90px 66px 400px;
-  width: 50%;
   background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
 }
 .statistics__quantity {
   display: flex;
   justify-content: start;
   padding: 70px 400px 66px 90px;
-  width: 50%;
   background: linear-gradient(101.48deg, #e9efff 41.56%, #e0e9ff 81.53%);
 }
 
 .statistics__info {
-  max-width: 260px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -472,7 +516,7 @@ form {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 23px;
   letter-spacing: 0.03em;
   text-align: right;
@@ -494,7 +538,7 @@ form {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 23px;
   letter-spacing: 0.03em;
   color: #5e80ff;
@@ -526,15 +570,16 @@ form {
 }
 
 .slider .slick-arrow::before {
+  display: none;
   font-size: 0;
 }
 .slider .slick-prev {
   left: -80px;
-  background: url(./img/icons/left-slider.png) 0 0 / 100% no-repeat;
+  background: url(./img/icons/left-slider.png) 0 0 / 100% no-repeat !important;
 }
 .slider .slick-next {
   right: -80px;
-  background: url(./img/icons/right-slider.png) 0 0 / 100% no-repeat;
+  background: url(./img/icons/right-slider.png) 0 0 / 100% no-repeat !important;
 }
 
 .slider .slick-dots {
@@ -570,6 +615,7 @@ form {
 }
 
 .slider-inner {
+  width: 900px;
   display: flex;
   align-items: center;
   column-gap: 73px;
@@ -599,9 +645,9 @@ form {
   height: 126px;
 }
 
-.promo-carousel-nav {
+/* .promo-carousel-nav {
   margin-top: 100px;
-}
+} */
 
 .slider__descr-name {
   font-family: "Quicksand";
@@ -688,6 +734,7 @@ form {
   margin-top: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .reviews__slider .slick-dots {
@@ -743,7 +790,12 @@ form {
 .questions-section {
   padding: 106px 0;
 }
-
+.qu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .questions__accordion-wrapper {
   max-width: 743px;
   margin: 68px auto 0 auto;
@@ -778,14 +830,14 @@ form {
 
 .answer__wrapper {
   transition: 0.5s;
-  /* max-height: 0;
-  overflow: hidden; */
   margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 62px;
   margin-bottom: 30px;
+  background-color: #e2e7f3;
+  padding: 5px;
 }
 .answer {
   font-family: "Roboto";
@@ -955,5 +1007,5 @@ form {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: #aeb8d0;
-  margin-left: 295px;
+  margin-left: 165px;
 }
